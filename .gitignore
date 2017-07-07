@@ -8,6 +8,9 @@ bin/
 include/
 lib/
 
+# sqlite3 db
+src/db.sqlite3
+
 # C extensions
 *.so
 
