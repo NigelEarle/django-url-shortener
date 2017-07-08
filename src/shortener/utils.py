@@ -1,7 +1,7 @@
 import random
 import string
 
-from django.confg import settings
+from django.conf import settings
 
 SHORTCODE_MIN = getattr(settings, "SHORTCODE_MIN", 6)
 
