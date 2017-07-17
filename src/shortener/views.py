@@ -9,6 +9,10 @@ class HomeView(View):
   def get(self, request, *args, **kwargs):
     return render(request, "shortener/home.html", {})
 
+  def post(self, request, *args, **kwargs):
+    print(request.POST.get("url"))
+    return render(request, "shortener/home.html", {})
+
 class KirrCBView(View):
   def get(self, request ,shortcode=None, *args, **kwargs): #class based view
     obj = get_object_or_404(KirrURL, shortcode=shortcode)
