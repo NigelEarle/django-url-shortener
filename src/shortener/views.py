@@ -24,10 +24,9 @@ class HomeView(View):
     }
     template = "shortener/home.html"
     if form.is_valid():
-      print(form.cleaned_data)
       new_url = form.cleaned_data.get("url")
       obj, created = KirrURL.objects.get_or_create(url=new_url)
-      new_context = {
+      context = {
         "obj": obj,
         "created": created
       }
@@ -36,18 +35,16 @@ class HomeView(View):
       else:
         template = "shortener/already-exists.html"
 
-    return render(request, template, new_context)
+    return render(request, template, context)
 
 
 class URLRedirectView(View):
   def get(self, request ,shortcode=None, *args, **kwargs): #class based view
-    qs = KirrURL.objects.filter(shortcode_iexact=shortcode)
+    qs = KirrURL.objects.filter(shortcode=shortcode)
     if qs.count() != 1 and not qs.exists():
       raise Http404
     obj = qs.first()
     print(ClickEvent.objects.create_event(obj))
     return HttpResponseRedirect(obj.url)
-
-
 
 
