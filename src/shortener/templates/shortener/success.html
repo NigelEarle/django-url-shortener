@@ -1,6 +1,8 @@
 <div style="align-text: center; width: 800px; margin: 0 auto">
   <h1>Created</h1>
   <p>{{ obj.url }}</p>
-  <p>{{ obj.get_short_url }}</p>
+  <p>
+    <a href="{{ obj.get_short_url }}">{{ obj.get_short_url }}</a>
+  </p>
   <a href="/">+ New</a>
 </div>
