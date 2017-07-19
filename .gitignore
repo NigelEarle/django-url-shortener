@@ -8,6 +8,8 @@ bin/
 include/
 lib/
 
+kirr/settings/local.py
+
 # sqlite3 db
 src/db.sqlite3
 
