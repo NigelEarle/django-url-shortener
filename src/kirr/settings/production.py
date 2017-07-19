@@ -57,8 +57,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = "http://www.tirr.com:5000" # use production domain
-PARENT_HOST = "tirr.com:5000" # use production domain
+DEFAULT_REDIRECT_URL = "chortn.herokuapp.com" # use production domain
+PARENT_HOST = "chortn.herokuapp.com" # use production domain
 
 TEMPLATES = [
     {
