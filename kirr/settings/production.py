@@ -25,7 +25,7 @@ SECRET_KEY = ')k98i@dx^qi4p1+^aa$lj&@p6bq&3d@=4vw7%*6-)33hq3f@nm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['shoart.herokuapp.com'] # use production domain
+ALLOWED_HOSTS = ['shoart.info', 'www.shoart.info'] # use production domain
 
 
 # Application definition
@@ -57,8 +57,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = "" # use production domain
-PARENT_HOST = "shoart.herokuapp.com" # use production domain
+DEFAULT_REDIRECT_URL = "http://www.shoart.info" # use production domain
+PARENT_HOST = "shoart.info" # use production domain
 
 TEMPLATES = [
     {
