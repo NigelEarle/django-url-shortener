@@ -25,7 +25,7 @@ SECRET_KEY = ')k98i@dx^qi4p1+^aa$lj&@p6bq&3d@=4vw7%*6-)33hq3f@nm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['shoart.info', 'www.shoart.info'] # use production domain
+ALLOWED_HOSTS = ['shoart.info', 'www.shoart.info', 'shoart.herokuapp.com'] # use production domain
 
 
 # Application definition
@@ -88,6 +88,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+import dj_database_url
+db_from_config = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
