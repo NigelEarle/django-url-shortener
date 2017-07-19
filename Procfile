@@ -1,1 +1,1 @@
-web: gunicorn src.kirr.wsgi --log-file -
+web: cd src/ && gunicorn src.kirr.wsgi --log-file -
