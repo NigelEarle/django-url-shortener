@@ -57,8 +57,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = "http://www.tirr.com:5000"
-PARENT_HOST = "tirr.com:5000"
+DEFAULT_REDIRECT_URL = "http://www.tirr.com:5003"
+PARENT_HOST = "tirr.com:5003"
 
 TEMPLATES = [
     {
