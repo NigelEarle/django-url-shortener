@@ -1,8 +1,17 @@
-<div style="align-text: center; width: 800px; margin: 0 auto">
-  <h1>Created</h1>
+{% extends "base.html" %}
+
+{% block title %}
+{{ obj.get_short_url }}
+{% endblock title %}
+
+
+{% block content%}
+<div class="">
+  <h1>Success!</h1>
   <p>{{ obj.url }}</p>
   <p>
-    <a href="{{ obj.get_short_url }}">{{ obj.get_short_url }}</a>
+    <a class="btn btn-primary btn-link" href="{{ obj.get_short_url }}">{{ obj.get_short_url }}</a>
   </p>
-  <a href="/">+ New</a>
+  <a class="btn btn-default" href="/">+ New</a>
 </div>
+{% endblock content%}
