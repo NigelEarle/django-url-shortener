@@ -3,22 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# virtualenv
-bin/
-include/
-lib/
-
-kirr/settings/local.py
-
-# sqlite3 db
-src/db.sqlite3
-
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -56,6 +45,12 @@ coverage.xml
 *.cover
 .hypothesis/
 
+/bin
+/include
+/lib
+
+/kirr/settings/local.*
+
 # Translations
 *.mo
 *.pot
@@ -89,11 +84,10 @@ celerybeat-schedule
 # SageMath parsed files
 *.sage.py
 
-# dotenv
+# Environments
 .env
-
-# virtualenv
 .venv
+env/
 venv/
 ENV/
 
