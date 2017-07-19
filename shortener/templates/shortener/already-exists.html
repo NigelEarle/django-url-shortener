@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ obj.get_short_url }}
+{% endblock title %}
+
+{% block styles%}
+<style>
+  body {
+        background-color: #ad3d3d;
+  }
+  .btn-link {
+    color: #ffa4a4;
+  }
+
+  .btn-link:hover {
+    color: #ffa4a4;
+  }
+</style>
+{% endblock styles %}
+
+{% block content%}
+<div class="">
+  <h1>Exists!</h1>
+  <p>{{ obj.url }}</p>
+  {% if obj.clickevent.count %}
+    <p>Count: {{ obj.clickevent.count}}</p>
+  {% endif %}
+  <p>
+    <a class="btn btn-link" href="{{ obj.get_short_url }}">{{ obj.get_short_url }}</a>
+  </p>
+  <a class="btn btn-default" href="/">+ New</a>
+</div>
+{% endblock content%}
