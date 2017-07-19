@@ -1,14 +1,31 @@
 {% extends "base.html" %}
 
+{% block styles%}
+  <style>
+    body {
+      background-color: #ad3d3d;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/18/Hong_Kong_Night_Skyline.jpg');
+      background-size: cover;
+    }
+    .btn-link {
+      color: #ffa4a4;
+    }
+
+    .btn-link:hover {
+      color: #ffa4a4;
+    }
+  </style>
+  {% endblock styles%}
 
 {% block content %}
 
 <h1 class="cover-heading">{{ title }}</h1>
+<p class="lead">Shorten that URL</p>
 <p class="lead">
   <div class="col-sm-6 col-sm-offset-3">
     <form action="." method="POST">{% csrf_token %}
       {{ form.as_p }}
-      <input class="btn btn-primary" type="submit" value="shorten">
+      <input class="btn btn-primary" type="submit" value="Shorten &raquo;">
     </form>
   </div>
 </p>
